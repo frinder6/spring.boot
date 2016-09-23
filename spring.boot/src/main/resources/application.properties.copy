@@ -1,0 +1,15 @@
+app.name=spring.boot
+#spring.resources.staticLocations=/resources
+#trace=true
+#debug=true
+#logging.level.root=WARN
+#logging.level.org.springframework.web=info
+#logging.level.org.hibernate=ERROR
+#logging.file=spring.demo.log
+spring.profiles.active=dev
+#spring.profiles.active=prod
+
+my.host=${host}
+my.port=6379
+#my.servers[0]=dev.bar.com
+#my.servers[1]=foo.bar.com

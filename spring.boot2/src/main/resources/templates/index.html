@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>首页</title>
+</head>
+<body>
+
+<h1>测试页！</h1>
+
+<div>
+
+    <ul>
+        <#if beans ??>
+            <#list beans as bean>
+                <li>${bean}</li>
+            </#list>
+        </#if>
+    </ul>
+</div>
+
+</body>
+</html>
