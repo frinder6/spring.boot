@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,13 +16,14 @@ import java.util.Map;
 public class BaseDao<T> implements IDao<T> {
 
     @Autowired
-    private NamedParameterJdbcTemplate primaryJdbcTemplate;
+    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+
 
     public T findById(final Long id, String sql, Class<T> mappedClass) {
         Map<String, Object> params = new HashMap<String, Object>() {{
             put("id", id);
         }};
-        return primaryJdbcTemplate.queryForObject(sql, params, new BeanPropertyRowMapper<T>(mappedClass));
+        return namedParameterJdbcTemplate.queryForObject(sql, params, new BeanPropertyRowMapper<T>(mappedClass));
     }
 
 }

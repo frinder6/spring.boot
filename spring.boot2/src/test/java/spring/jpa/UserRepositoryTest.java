@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import spring.datasource.UserService2;
 import spring.jdbc.UserService;
 import spring.mybatis.UserMapper;
 
@@ -29,6 +30,9 @@ public class UserRepositoryTest {
     @Autowired
     private UserMapper userMapper;
 
+//    @Autowired
+    private UserService2 userService2;
+
 
     @Test
     public void test() {
@@ -50,6 +54,18 @@ public class UserRepositoryTest {
         User user = userService.findById(1L);
         Assert.assertNotNull(user);
         System.out.println(JSON.toJSONString(user));
+
+
+//        user = userService2.findByIdPri(1L);
+//        Assert.assertNotNull(user);
+//        System.out.println(JSON.toJSONString(user));
+//
+//        user = userService2.findByIdSec(1L);
+//        Assert.assertNotNull(user);
+//        System.out.println(JSON.toJSONString(user));
+
+
+
     }
 
 }

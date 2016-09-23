@@ -11,7 +11,7 @@ import javax.sql.DataSource;
 /**
  * Created by frinder6 on 2016/9/23.
  */
-@Configuration
+//@Configuration
 public class JdbcTemplateBean {
 
     @Autowired
