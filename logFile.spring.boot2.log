@@ -1,0 +1,297 @@
+2016-09-24 15:53:20.005 [9319] [restartedMain] INFO  o.e.j.server.handler.ContextHandler - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@7db341c7{/,file:///C:/Users/frinder6/AppData/Local/Temp/jetty-docbase.7459991628193697622.8080/,AVAILABLE}
+2016-09-24 15:53:20.031 [9345] [restartedMain] INFO  org.eclipse.jetty.server.Server - Started @9790ms
+2016-09-24 15:53:20.706 [10020] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-24 15:53:20.745 [10059] [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-24 15:53:20.967 [10281] [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.9.Final}
+2016-09-24 15:53:20.973 [10287] [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2016-09-24 15:53:20.983 [10297] [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2016-09-24 15:53:21.080 [10394] [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-24 15:53:21.964 [11278] [restartedMain] INFO  jdbc.connection - 1. Connection opened
+2016-09-24 15:53:21.972 [11286] [restartedMain] INFO  jdbc.connection - 2. Connection opened
+2016-09-24 15:53:21.980 [11294] [restartedMain] INFO  jdbc.connection - 3. Connection opened
+2016-09-24 15:53:21.987 [11301] [restartedMain] INFO  jdbc.connection - 4. Connection opened
+2016-09-24 15:53:21.994 [11308] [restartedMain] INFO  jdbc.connection - 5. Connection opened
+2016-09-24 15:53:22.000 [11314] [restartedMain] INFO  jdbc.connection - 6. Connection opened
+2016-09-24 15:53:22.008 [11322] [restartedMain] INFO  jdbc.connection - 7. Connection opened
+2016-09-24 15:53:22.016 [11330] [restartedMain] INFO  jdbc.connection - 8. Connection opened
+2016-09-24 15:53:22.032 [11346] [restartedMain] INFO  jdbc.connection - 9. Connection opened
+2016-09-24 15:53:22.051 [11365] [restartedMain] INFO  jdbc.connection - 10. Connection opened
+2016-09-24 15:53:22.083 [11397] [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-09-24 15:53:22.978 [12292] [restartedMain] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-09-24 15:53:23.352 [12666] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-24 15:53:23.527 [12841] [restartedMain] INFO  spring.profile.DevProfile - ***********************************
+2016-09-24 15:53:23.527 [12841] [restartedMain] INFO  spring.profile.DevProfile - dev config init !
+2016-09-24 15:53:23.527 [12841] [restartedMain] INFO  spring.profile.DevProfile - ***********************************
+2016-09-24 15:53:24.687 [14001] [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2016-09-24 15:53:25.095 [14409] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@6343e6fc: startup date [Sat Sep 24 15:53:13 CST 2016]; root of context hierarchy
+2016-09-24 15:53:25.276 [14590] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/print]}" onto public java.lang.String spring.test.TestController.printBeans(org.springframework.ui.ModelMap)
+2016-09-24 15:53:25.277 [14591] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/my/exp]}" onto public java.lang.String spring.test.TestController.testMyException() throws spring.contoller.advice.MyException
+2016-09-24 15:53:25.279 [14593] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/exp]}" onto public java.lang.String spring.test.TestController.testException() throws java.lang.Exception
+2016-09-24 15:53:25.280 [14594] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/]}" onto public java.lang.String spring.test.TestController.say()
+2016-09-24 15:53:25.284 [14598] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-24 15:53:25.285 [14599] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-24 15:53:25.441 [14755] [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-24 15:53:25.442 [14756] [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-24 15:53:25.490 [14804] [restartedMain] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in myExceptionHandler
+2016-09-24 15:53:25.550 [14864] [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-24 15:53:26.478 [15792] [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2016-09-24 15:53:26.735 [16049] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2016-09-24 15:53:26.879 [16193] [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-09-24 15:53:26.970 [16284] [restartedMain] INFO  application - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-24 15:53:26.971 [16285] [restartedMain] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-24 15:53:27.036 [16350] [restartedMain] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 64 ms
+2016-09-24 15:53:27.139 [16453] [restartedMain] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@69b447df{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2016-09-24 15:53:27.144 [16458] [restartedMain] INFO  o.s.b.c.e.j.JettyEmbeddedServletContainer - Jetty started on port(s) 8080 (http/1.1)
+2016-09-24 15:53:27.151 [16465] [restartedMain] INFO  spring.runner.ApplicationRunnerImpl - ***********************************
+2016-09-24 15:53:27.151 [16465] [restartedMain] INFO  spring.runner.ApplicationRunnerImpl - application runner init !
+2016-09-24 15:53:27.152 [16466] [restartedMain] INFO  spring.runner.ApplicationRunnerImpl - ***********************************
+2016-09-24 15:53:27.152 [16466] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - ***********************************
+2016-09-24 15:53:27.152 [16466] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - command line runner init !
+2016-09-24 15:53:27.152 [16466] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - ***********************************
+2016-09-24 15:53:27.269 [16583] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - ["java","C#","C++"]
+2016-09-24 15:53:27.271 [16585] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - {"key1":"value1","key2":"value2"}
+2016-09-24 15:53:27.288 [16602] [restartedMain] INFO  spring.App - Started App in 15.847 seconds (JVM running for 17.047)
+2016-09-24 16:04:03.507 [2953] [restartedMain] INFO  spring.App - Starting App on DESKTOP-B8VRV8U with PID 4616 (D:\DEV\git\spring.demo\spring.boot2\target\classes started by frinder6 in D:\DEV\git\spring.demo)
+2016-09-24 16:04:03.514 [2960] [restartedMain] INFO  spring.App - The following profiles are active: dev
+2016-09-24 16:04:03.638 [3084] [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a994683: startup date [Sat Sep 24 16:04:03 CST 2016]; root of context hierarchy
+2016-09-24 16:04:03.656 [3102] [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2016-09-24 16:04:06.884 [6330] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-24 16:04:07.083 [6529] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-24 16:04:07.128 [6574] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface spring.jpa.UserRepository.
+2016-09-24 16:04:08.084 [7530] [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3085f71a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-24 16:04:08.827 [8273] [restartedMain] INFO  org.eclipse.jetty.util.log - Logging initialized @8744ms
+2016-09-24 16:04:09.362 [8808] [restartedMain] INFO  o.s.b.c.e.j.JettyEmbeddedServletContainerFactory - Server initialized with port: 8080
+2016-09-24 16:04:09.366 [8812] [restartedMain] INFO  org.eclipse.jetty.server.Server - jetty-9.3.11.v20160721
+2016-09-24 16:04:09.600 [9046] [restartedMain] INFO  application - Initializing Spring embedded WebApplicationContext
+2016-09-24 16:04:09.644 [9090] [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6006 ms
+2016-09-24 16:04:09.998 [9444] [restartedMain] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-24 16:04:10.003 [9449] [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-24 16:04:10.004 [9450] [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-24 16:04:10.004 [9450] [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-24 16:04:10.004 [9450] [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-24 16:04:10.346 [9792] [restartedMain] INFO  o.e.j.server.handler.ContextHandler - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@747bb405{/,file:///C:/Users/frinder6/AppData/Local/Temp/jetty-docbase.309980420297079701.8080/,AVAILABLE}
+2016-09-24 16:04:10.347 [9793] [restartedMain] INFO  org.eclipse.jetty.server.Server - Started @10264ms
+2016-09-24 16:04:10.785 [10231] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-24 16:04:10.820 [10266] [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-24 16:04:10.989 [10435] [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.9.Final}
+2016-09-24 16:04:10.993 [10439] [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2016-09-24 16:04:10.996 [10442] [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2016-09-24 16:04:11.088 [10534] [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-09-24 16:04:12.144 [11590] [restartedMain] INFO  jdbc.connection - 1. Connection opened
+2016-09-24 16:04:12.160 [11606] [restartedMain] INFO  jdbc.connection - 2. Connection opened
+2016-09-24 16:04:12.174 [11620] [restartedMain] INFO  jdbc.connection - 3. Connection opened
+2016-09-24 16:04:12.184 [11630] [restartedMain] INFO  jdbc.connection - 4. Connection opened
+2016-09-24 16:04:12.191 [11637] [restartedMain] INFO  jdbc.connection - 5. Connection opened
+2016-09-24 16:04:12.198 [11644] [restartedMain] INFO  jdbc.connection - 6. Connection opened
+2016-09-24 16:04:12.204 [11650] [restartedMain] INFO  jdbc.connection - 7. Connection opened
+2016-09-24 16:04:12.211 [11657] [restartedMain] INFO  jdbc.connection - 8. Connection opened
+2016-09-24 16:04:12.218 [11664] [restartedMain] INFO  jdbc.connection - 9. Connection opened
+2016-09-24 16:04:12.236 [11682] [restartedMain] INFO  jdbc.connection - 10. Connection opened
+2016-09-24 16:04:12.274 [11720] [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-09-24 16:04:13.043 [12489] [restartedMain] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-09-24 16:04:13.360 [12806] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-24 16:04:13.521 [12967] [restartedMain] INFO  spring.profile.DevProfile - ***********************************
+2016-09-24 16:04:13.522 [12968] [restartedMain] INFO  spring.profile.DevProfile - dev config init !
+2016-09-24 16:04:13.522 [12968] [restartedMain] INFO  spring.profile.DevProfile - ***********************************
+2016-09-24 16:04:14.538 [13984] [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2016-09-24 16:04:14.876 [14322] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a994683: startup date [Sat Sep 24 16:04:03 CST 2016]; root of context hierarchy
+2016-09-24 16:04:15.047 [14493] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/print]}" onto public java.lang.String spring.test.TestController.printBeans(org.springframework.ui.ModelMap)
+2016-09-24 16:04:15.049 [14495] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/]}" onto public java.lang.String spring.test.TestController.say()
+2016-09-24 16:04:15.049 [14495] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/my/exp]}" onto public java.lang.String spring.test.TestController.testMyException() throws spring.contoller.advice.MyException
+2016-09-24 16:04:15.050 [14496] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/exp]}" onto public java.lang.String spring.test.TestController.testException() throws java.lang.Exception
+2016-09-24 16:04:15.053 [14499] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-24 16:04:15.059 [14505] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-24 16:04:15.138 [14584] [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-24 16:04:15.138 [14584] [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-24 16:04:15.176 [14622] [restartedMain] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in myExceptionHandler
+2016-09-24 16:04:15.246 [14692] [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-24 16:04:16.395 [15841] [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2016-09-24 16:04:16.656 [16102] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2016-09-24 16:04:16.685 [16131] [restartedMain] WARN  o.s.b.s.r.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2016-09-24 16:04:16.855 [16301] [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-09-24 16:04:16.912 [16358] [restartedMain] INFO  application - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-24 16:04:16.912 [16358] [restartedMain] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-24 16:04:16.952 [16398] [restartedMain] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 39 ms
+2016-09-24 16:04:17.001 [16447] [restartedMain] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@53bdca18{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2016-09-24 16:04:17.007 [16453] [restartedMain] INFO  o.s.b.c.e.j.JettyEmbeddedServletContainer - Jetty started on port(s) 8080 (http/1.1)
+2016-09-24 16:04:17.012 [16458] [restartedMain] INFO  spring.runner.ApplicationRunnerImpl - ***********************************
+2016-09-24 16:04:17.013 [16459] [restartedMain] INFO  spring.runner.ApplicationRunnerImpl - application runner init !
+2016-09-24 16:04:17.013 [16459] [restartedMain] INFO  spring.runner.ApplicationRunnerImpl - ***********************************
+2016-09-24 16:04:17.013 [16459] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - ***********************************
+2016-09-24 16:04:17.014 [16460] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - command line runner init !
+2016-09-24 16:04:17.014 [16460] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - ***********************************
+2016-09-24 16:04:17.085 [16531] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - ["java","C#","C++"]
+2016-09-24 16:04:17.087 [16533] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - {"key1":"value1","key2":"value2"}
+2016-09-24 16:04:17.092 [16538] [restartedMain] INFO  spring.App - Started App in 15.735 seconds (JVM running for 17.01)
+2016-09-24 16:07:18.263 [197709] [Thread-17] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3a994683: startup date [Sat Sep 24 16:04:03 CST 2016]; root of context hierarchy
+2016-09-24 16:07:18.272 [197718] [Thread-17] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2016-09-24 16:07:18.302 [197748] [Thread-17] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-09-24 16:07:18.313 [197759] [Thread-17] INFO  jdbc.connection - 9. Connection closed
+2016-09-24 16:07:18.319 [197765] [Thread-17] INFO  jdbc.connection - 10. Connection closed
+2016-09-24 16:07:18.322 [197768] [Thread-17] INFO  jdbc.connection - 8. Connection closed
+2016-09-24 16:07:18.326 [197772] [Thread-17] INFO  jdbc.connection - 7. Connection closed
+2016-09-24 16:07:18.329 [197775] [Thread-17] INFO  jdbc.connection - 6. Connection closed
+2016-09-24 16:07:18.329 [197775] [Thread-17] INFO  jdbc.connection - 5. Connection closed
+2016-09-24 16:07:18.334 [197780] [Thread-17] INFO  jdbc.connection - 4. Connection closed
+2016-09-24 16:07:18.335 [197781] [Thread-17] INFO  jdbc.connection - 3. Connection closed
+2016-09-24 16:07:18.337 [197783] [Thread-17] INFO  jdbc.connection - 2. Connection closed
+2016-09-24 16:07:18.362 [197808] [Thread-17] INFO  jdbc.connection - 1. Connection closed
+2016-09-24 16:07:18.391 [197837] [Thread-17] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@53bdca18{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2016-09-24 16:07:18.497 [197943] [Thread-17] INFO  application - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2016-09-24 16:07:18.498 [197944] [Thread-17] INFO  o.e.j.server.handler.ContextHandler - Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@747bb405{/,file:///C:/Users/frinder6/AppData/Local/Temp/jetty-docbase.309980420297079701.8080/,UNAVAILABLE}
+2016-09-24 16:07:19.149 [198595] [restartedMain] INFO  spring.App - Starting App on DESKTOP-B8VRV8U with PID 4616 (D:\DEV\git\spring.demo\spring.boot2\target\classes started by frinder6 in D:\DEV\git\spring.demo)
+2016-09-24 16:07:19.149 [198595] [restartedMain] INFO  spring.App - The following profiles are active: dev
+2016-09-24 16:07:19.173 [198619] [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4886de06: startup date [Sat Sep 24 16:07:19 CST 2016]; root of context hierarchy
+2016-09-24 16:07:22.023 [201469] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-24 16:07:22.265 [201711] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-24 16:07:22.289 [201735] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface spring.jpa.UserRepository.
+2016-09-24 16:07:22.542 [201988] [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3085f71a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-24 16:07:22.944 [202390] [restartedMain] INFO  o.s.b.c.e.j.JettyEmbeddedServletContainerFactory - Server initialized with port: 8080
+2016-09-24 16:07:22.945 [202391] [restartedMain] INFO  org.eclipse.jetty.server.Server - jetty-9.3.11.v20160721
+2016-09-24 16:07:22.959 [202405] [restartedMain] INFO  application - Initializing Spring embedded WebApplicationContext
+2016-09-24 16:07:22.960 [202406] [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3787 ms
+2016-09-24 16:07:23.057 [202503] [restartedMain] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-24 16:07:23.058 [202504] [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-24 16:07:23.058 [202504] [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-24 16:07:23.058 [202504] [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-24 16:07:23.058 [202504] [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-24 16:07:23.190 [202636] [restartedMain] INFO  o.e.j.server.handler.ContextHandler - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@3a2eb901{/,file:///C:/Users/frinder6/AppData/Local/Temp/jetty-docbase.7540825660758979069.8080/,AVAILABLE}
+2016-09-24 16:07:23.191 [202637] [restartedMain] INFO  org.eclipse.jetty.server.Server - Started @203108ms
+2016-09-24 16:07:23.587 [203033] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-24 16:07:23.587 [203033] [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-24 16:07:23.658 [203104] [restartedMain] INFO  jdbc.connection - 11. Connection opened
+2016-09-24 16:07:23.667 [203113] [restartedMain] INFO  jdbc.connection - 12. Connection opened
+2016-09-24 16:07:23.672 [203118] [restartedMain] INFO  jdbc.connection - 13. Connection opened
+2016-09-24 16:07:23.677 [203123] [restartedMain] INFO  jdbc.connection - 14. Connection opened
+2016-09-24 16:07:23.682 [203128] [restartedMain] INFO  jdbc.connection - 15. Connection opened
+2016-09-24 16:07:23.688 [203134] [restartedMain] INFO  jdbc.connection - 16. Connection opened
+2016-09-24 16:07:23.693 [203139] [restartedMain] INFO  jdbc.connection - 17. Connection opened
+2016-09-24 16:07:23.697 [203143] [restartedMain] INFO  jdbc.connection - 18. Connection opened
+2016-09-24 16:07:23.702 [203148] [restartedMain] INFO  jdbc.connection - 19. Connection opened
+2016-09-24 16:07:23.721 [203167] [restartedMain] INFO  jdbc.connection - 20. Connection opened
+2016-09-24 16:07:23.722 [203168] [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-09-24 16:07:23.783 [203229] [restartedMain] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-09-24 16:07:24.812 [204258] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-24 16:07:25.008 [204454] [restartedMain] INFO  spring.profile.DevProfile - ***********************************
+2016-09-24 16:07:25.008 [204454] [restartedMain] INFO  spring.profile.DevProfile - dev config init !
+2016-09-24 16:07:25.009 [204455] [restartedMain] INFO  spring.profile.DevProfile - ***********************************
+2016-09-24 16:07:25.675 [205121] [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2016-09-24 16:07:25.724 [205170] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4886de06: startup date [Sat Sep 24 16:07:19 CST 2016]; root of context hierarchy
+2016-09-24 16:07:25.740 [205186] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/print]}" onto public java.lang.String spring.test.TestController.printBeans(org.springframework.ui.ModelMap)
+2016-09-24 16:07:25.741 [205187] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/]}" onto public java.lang.String spring.test.TestController.say()
+2016-09-24 16:07:25.741 [205187] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/my/exp]}" onto public java.lang.String spring.test.TestController.testMyException() throws spring.contoller.advice.MyException
+2016-09-24 16:07:25.741 [205187] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/exp]}" onto public java.lang.String spring.test.TestController.testException() throws java.lang.Exception
+2016-09-24 16:07:25.745 [205191] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-24 16:07:25.746 [205192] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-24 16:07:25.770 [205216] [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-24 16:07:25.770 [205216] [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-24 16:07:25.798 [205244] [restartedMain] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in myExceptionHandler
+2016-09-24 16:07:25.829 [205275] [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-24 16:07:26.545 [205991] [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2016-09-24 16:07:26.776 [206222] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2016-09-24 16:07:26.778 [206224] [restartedMain] WARN  o.s.b.s.r.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2016-09-24 16:07:27.014 [206460] [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-09-24 16:07:27.058 [206504] [restartedMain] INFO  application - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-24 16:07:27.074 [206520] [restartedMain] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-24 16:07:27.126 [206572] [restartedMain] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2016-09-24 16:07:28.542 [207988] [restartedMain] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@3a94302d{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2016-09-24 16:07:28.542 [207988] [restartedMain] INFO  o.s.b.c.e.j.JettyEmbeddedServletContainer - Jetty started on port(s) 8080 (http/1.1)
+2016-09-24 16:07:28.547 [207993] [restartedMain] INFO  spring.runner.ApplicationRunnerImpl - ***********************************
+2016-09-24 16:07:28.547 [207993] [restartedMain] INFO  spring.runner.ApplicationRunnerImpl - application runner init !
+2016-09-24 16:07:28.548 [207994] [restartedMain] INFO  spring.runner.ApplicationRunnerImpl - ***********************************
+2016-09-24 16:07:28.548 [207994] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - ***********************************
+2016-09-24 16:07:28.549 [207995] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - command line runner init !
+2016-09-24 16:07:28.549 [207995] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - ***********************************
+2016-09-24 16:07:28.549 [207995] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - ["java","C#","C++"]
+2016-09-24 16:07:28.549 [207995] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - {"key1":"value1","key2":"value2"}
+2016-09-24 16:07:28.550 [207996] [restartedMain] INFO  spring.App - Started App in 9.696 seconds (JVM running for 208.467)
+2016-09-24 16:07:35.410 [214856] [Thread-20] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4886de06: startup date [Sat Sep 24 16:07:19 CST 2016]; root of context hierarchy
+2016-09-24 16:07:35.412 [214858] [Thread-20] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2016-09-24 16:07:35.421 [214867] [Thread-20] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2016-09-24 16:07:35.422 [214868] [Thread-20] INFO  jdbc.connection - 19. Connection closed
+2016-09-24 16:07:35.424 [214870] [Thread-20] INFO  jdbc.connection - 20. Connection closed
+2016-09-24 16:07:35.446 [214892] [Thread-20] INFO  jdbc.connection - 18. Connection closed
+2016-09-24 16:07:35.448 [214894] [Thread-20] INFO  jdbc.connection - 17. Connection closed
+2016-09-24 16:07:35.448 [214894] [Thread-20] INFO  jdbc.connection - 16. Connection closed
+2016-09-24 16:07:35.449 [214895] [Thread-20] INFO  jdbc.connection - 15. Connection closed
+2016-09-24 16:07:35.449 [214895] [Thread-20] INFO  jdbc.connection - 14. Connection closed
+2016-09-24 16:07:35.449 [214895] [Thread-20] INFO  jdbc.connection - 13. Connection closed
+2016-09-24 16:07:35.449 [214895] [Thread-20] INFO  jdbc.connection - 12. Connection closed
+2016-09-24 16:07:35.450 [214896] [Thread-20] INFO  jdbc.connection - 11. Connection closed
+2016-09-24 16:07:35.452 [214898] [Thread-20] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@3a94302d{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2016-09-24 16:07:35.453 [214899] [Thread-20] INFO  application - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2016-09-24 16:07:35.453 [214899] [Thread-20] INFO  o.e.j.server.handler.ContextHandler - Stopped o.s.b.c.e.j.JettyEmbeddedWebAppContext@3a2eb901{/,file:///C:/Users/frinder6/AppData/Local/Temp/jetty-docbase.7540825660758979069.8080/,UNAVAILABLE}
+2016-09-24 16:07:36.411 [215857] [restartedMain] INFO  spring.App - Starting App on DESKTOP-B8VRV8U with PID 4616 (D:\DEV\git\spring.demo\spring.boot2\target\classes started by frinder6 in D:\DEV\git\spring.demo)
+2016-09-24 16:07:36.412 [215858] [restartedMain] INFO  spring.App - The following profiles are active: dev
+2016-09-24 16:07:36.416 [215862] [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@762be253: startup date [Sat Sep 24 16:07:36 CST 2016]; root of context hierarchy
+2016-09-24 16:07:41.516 [220962] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-24 16:07:41.653 [221099] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2016-09-24 16:07:41.678 [221124] [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface spring.jpa.UserRepository.
+2016-09-24 16:07:41.798 [221244] [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3085f71a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-09-24 16:07:41.987 [221433] [restartedMain] INFO  o.s.b.c.e.j.JettyEmbeddedServletContainerFactory - Server initialized with port: 8080
+2016-09-24 16:07:41.987 [221433] [restartedMain] INFO  org.eclipse.jetty.server.Server - jetty-9.3.11.v20160721
+2016-09-24 16:07:41.996 [221442] [restartedMain] INFO  application - Initializing Spring embedded WebApplicationContext
+2016-09-24 16:07:41.996 [221442] [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5580 ms
+2016-09-24 16:07:42.090 [221536] [restartedMain] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2016-09-24 16:07:42.091 [221537] [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-09-24 16:07:42.092 [221538] [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-09-24 16:07:42.092 [221538] [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-09-24 16:07:42.092 [221538] [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2016-09-24 16:07:42.106 [221552] [restartedMain] INFO  o.e.j.server.handler.ContextHandler - Started o.s.b.c.e.j.JettyEmbeddedWebAppContext@7d0a8def{/,file:///C:/Users/frinder6/AppData/Local/Temp/jetty-docbase.8718362910253766558.8080/,AVAILABLE}
+2016-09-24 16:07:42.107 [221553] [restartedMain] INFO  org.eclipse.jetty.server.Server - Started @222024ms
+2016-09-24 16:07:42.321 [221767] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-09-24 16:07:42.322 [221768] [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-09-24 16:07:42.356 [221802] [restartedMain] INFO  jdbc.connection - 21. Connection opened
+2016-09-24 16:07:42.360 [221806] [restartedMain] INFO  jdbc.connection - 22. Connection opened
+2016-09-24 16:07:42.367 [221813] [restartedMain] INFO  jdbc.connection - 23. Connection opened
+2016-09-24 16:07:42.372 [221818] [restartedMain] INFO  jdbc.connection - 24. Connection opened
+2016-09-24 16:07:42.377 [221823] [restartedMain] INFO  jdbc.connection - 25. Connection opened
+2016-09-24 16:07:42.383 [221829] [restartedMain] INFO  jdbc.connection - 26. Connection opened
+2016-09-24 16:07:42.389 [221835] [restartedMain] INFO  jdbc.connection - 27. Connection opened
+2016-09-24 16:07:42.394 [221840] [restartedMain] INFO  jdbc.connection - 28. Connection opened
+2016-09-24 16:07:42.399 [221845] [restartedMain] INFO  jdbc.connection - 29. Connection opened
+2016-09-24 16:07:42.409 [221855] [restartedMain] INFO  jdbc.connection - 30. Connection opened
+2016-09-24 16:07:42.411 [221857] [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-09-24 16:07:42.446 [221892] [restartedMain] INFO  o.h.tool.hbm2ddl.SchemaUpdate - HHH000228: Running hbm2ddl schema update
+2016-09-24 16:07:42.627 [222073] [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2016-09-24 16:07:42.676 [222122] [restartedMain] INFO  spring.profile.DevProfile - ***********************************
+2016-09-24 16:07:42.678 [222124] [restartedMain] INFO  spring.profile.DevProfile - dev config init !
+2016-09-24 16:07:42.678 [222124] [restartedMain] INFO  spring.profile.DevProfile - ***********************************
+2016-09-24 16:07:42.921 [222367] [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2016-09-24 16:07:42.948 [222394] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@762be253: startup date [Sat Sep 24 16:07:36 CST 2016]; root of context hierarchy
+2016-09-24 16:07:42.965 [222411] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/print]}" onto public java.lang.String spring.test.TestController.printBeans(org.springframework.ui.ModelMap)
+2016-09-24 16:07:42.966 [222412] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/]}" onto public java.lang.String spring.test.TestController.say()
+2016-09-24 16:07:42.966 [222412] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/my/exp]}" onto public java.lang.String spring.test.TestController.testMyException() throws spring.contoller.advice.MyException
+2016-09-24 16:07:42.966 [222412] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/exp]}" onto public java.lang.String spring.test.TestController.testException() throws java.lang.Exception
+2016-09-24 16:07:42.971 [222417] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-09-24 16:07:42.971 [222417] [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-09-24 16:07:42.994 [222440] [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-24 16:07:42.994 [222440] [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-24 16:07:43.008 [222454] [restartedMain] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in myExceptionHandler
+2016-09-24 16:07:43.019 [222465] [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-09-24 16:07:43.299 [222745] [restartedMain] INFO  o.s.w.s.v.f.FreeMarkerConfigurer - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2016-09-24 16:07:43.352 [222798] [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2016-09-24 16:07:43.354 [222800] [restartedMain] WARN  o.s.b.s.r.RedisStarterDeprecationWarningAutoConfiguration - spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2016-09-24 16:07:43.451 [222897] [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2016-09-24 16:07:43.467 [222913] [restartedMain] INFO  application - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-09-24 16:07:43.467 [222913] [restartedMain] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+2016-09-24 16:07:43.476 [222922] [restartedMain] INFO  o.s.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 9 ms
+2016-09-24 16:07:43.483 [222929] [restartedMain] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@5a0ca775{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2016-09-24 16:07:43.483 [222929] [restartedMain] INFO  o.s.b.c.e.j.JettyEmbeddedServletContainer - Jetty started on port(s) 8080 (http/1.1)
+2016-09-24 16:07:43.485 [222931] [restartedMain] INFO  spring.runner.ApplicationRunnerImpl - ***********************************
+2016-09-24 16:07:43.486 [222932] [restartedMain] INFO  spring.runner.ApplicationRunnerImpl - application runner init !
+2016-09-24 16:07:43.486 [222932] [restartedMain] INFO  spring.runner.ApplicationRunnerImpl - ***********************************
+2016-09-24 16:07:43.486 [222932] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - ***********************************
+2016-09-24 16:07:43.486 [222932] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - command line runner init !
+2016-09-24 16:07:43.486 [222932] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - ***********************************
+2016-09-24 16:07:43.486 [222932] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - ["java","C#","C++"]
+2016-09-24 16:07:43.486 [222932] [restartedMain] INFO  spring.runner.CommandLineRunnerImpl - {"key1":"value1","key2":"value2"}
+2016-09-24 16:07:43.487 [222933] [restartedMain] INFO  spring.App - Started App in 7.541 seconds (JVM running for 223.404)

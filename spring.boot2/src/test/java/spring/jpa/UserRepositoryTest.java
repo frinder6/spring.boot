@@ -36,8 +36,8 @@ public class UserRepositoryTest {
 
     @Test
     public void test() {
-//        User user = new User("name", "M", 28, "hihi...");
-//        userRepository.save(user);
+        User user = new User("name", "M", 28, "hihi...");
+        userRepository.save(user);
 //        List<User> users = userRepository.findByName("name");
 //        Assert.assertNotNull(users);
 //        System.out.println(JSON.toJSONString(users));
@@ -51,10 +51,13 @@ public class UserRepositoryTest {
 //        Assert.assertNotNull(user);
 //        System.out.println(JSON.toJSONString(user));
 
-        User user = userService.findById(1L);
+        user = userService.findById(1L);
         Assert.assertNotNull(user);
         System.out.println(JSON.toJSONString(user));
 
+        List<User> users = userMapper.findByIds("1,2,3");
+        Assert.assertNotNull(users);
+        System.out.println(JSON.toJSONString(users));
 
 //        user = userService2.findByIdPri(1L);
 //        Assert.assertNotNull(user);

@@ -20,4 +20,7 @@ public interface UserMapper {
     @Select("select * from user where name = #{name}")
     List<User> findByName(@Param("name") String name);
 
+    @Select("select * from user where id in ( ${ids} )")
+    List<User> findByIds(@Param("ids") String ids);
+
 }
