@@ -51,7 +51,7 @@ public class UserRepositoryTest {
 //        Assert.assertNotNull(user);
 //        System.out.println(JSON.toJSONString(user));
 
-        user = userService.findById(1L);
+        user = userService.findById(100L);
         Assert.assertNotNull(user);
         System.out.println(JSON.toJSONString(user));
 
