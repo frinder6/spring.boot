@@ -18,7 +18,7 @@ import java.util.Random;
  */
 //@RestController
 @Controller
-public class TestController  implements ApplicationContextAware {
+public class TestController implements ApplicationContextAware {
 
     @Autowired
     private ApplicationContext applicationContext;
@@ -31,7 +31,7 @@ public class TestController  implements ApplicationContextAware {
     }
 
     @RequestMapping("/")
-    public String say(){
+    public String say() {
         return "index";
     }
 
@@ -59,8 +59,6 @@ public class TestController  implements ApplicationContextAware {
 //            System.out.println(String.format(template, start));
 //        }
 //    }
-
-
 
 
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
