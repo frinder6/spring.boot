@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * Created by frinder6 on 2016/9/12.
+ * Created on 2016/9/12.
  */
 
 @Repository("baseDao")

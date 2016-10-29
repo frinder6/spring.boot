@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by frinder6 on 2016/9/16.
+ * Created on 2016/9/16.
  */
 @Component
 @Profile("dev")

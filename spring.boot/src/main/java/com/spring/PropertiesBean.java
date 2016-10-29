@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by frinder6 on 2016/9/2.
+ * Created on 2016/9/2.
  */
 @Configuration
 @ConfigurationProperties(prefix = "my")

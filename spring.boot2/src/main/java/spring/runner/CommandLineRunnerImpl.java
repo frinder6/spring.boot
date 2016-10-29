@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import spring.yaml.YamlBean;
 
 /**
- * Created by frinder6 on 2016/9/16.
+ * Created on 2016/9/16.
  */
 @Component
 public class CommandLineRunnerImpl implements CommandLineRunner {

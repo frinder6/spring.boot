@@ -14,7 +14,7 @@ import spring.mybatis.UserMapper;
 import java.util.List;
 
 /**
- * Created by frinder6 on 2016/9/19.
+ * Created on 2016/9/19.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest

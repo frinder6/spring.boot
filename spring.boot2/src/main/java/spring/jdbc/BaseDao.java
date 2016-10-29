@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by frinder6 on 2016/9/20.
+ * Created on 2016/9/20.
  */
 @Repository
 public class BaseDao<T> implements IDao<T> {

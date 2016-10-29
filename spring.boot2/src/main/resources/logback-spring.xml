@@ -57,6 +57,8 @@
         <appender-ref ref="stdout"/>
     </logger>
 
+    <logger name="spring" level="info" />
+
 
     <root level="info">
         <appender-ref ref="stdout"/>

@@ -9,7 +9,7 @@ import spring.jpa.User;
 import java.util.List;
 
 /**
- * Created by frinder6 on 2016/9/21.
+ * Created on 2016/9/21.
  */
 @Mapper
 public interface UserMapper {

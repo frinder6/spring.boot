@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by frinder6 on 2016/9/16.
+ * Created on 2016/9/16.
  */
 @Configuration
 @ConfigurationProperties(prefix = "yaml")

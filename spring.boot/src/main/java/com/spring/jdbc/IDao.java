@@ -3,7 +3,7 @@ package com.spring.jdbc;
 import java.util.List;
 
 /**
- * Created by frinder6 on 2016/9/12.
+ * Created on 2016/9/12.
  */
 public interface IDao<T> {
 

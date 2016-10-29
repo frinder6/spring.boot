@@ -10,7 +10,7 @@ import java.sql.Savepoint;
 import java.util.Properties;
 
 /**
- * Created by frinder6 on 2016/9/24.
+ * Created on 2016/9/24.
  */
 public class ConnectionLifecycleInterceptorImpl implements ConnectionLifecycleInterceptor {
 

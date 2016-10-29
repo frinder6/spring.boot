@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import javax.sql.DataSource;
 
 /**
- * Created by frinder6 on 2016/9/12.
+ * Created on 2016/9/12.
  */
 //@Component
 public class DataSourceBean {

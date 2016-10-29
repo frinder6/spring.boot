@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import javax.sql.DataSource;
 
 /**
- * Created by frinder6 on 2016/9/23.
+ * Created on 2016/9/23.
  */
 //@Configuration
 public class JdbcTemplateBean {

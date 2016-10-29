@@ -5,7 +5,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Created by frinder6 on 2016/9/6.
+ * Created on 2016/9/6.
  */
 @Controller
 @RequestMapping("ftl")

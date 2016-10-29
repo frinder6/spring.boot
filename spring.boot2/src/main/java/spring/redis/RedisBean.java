@@ -11,10 +11,10 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import redis.clients.jedis.JedisPoolConfig;
 
 /**
- * Created by frinder6 on 2016/9/24.
+ * Created on 2016/9/24.
  */
-//@Configuration
-//@ConfigurationProperties(prefix = "spring.redis")
+@Configuration
+@ConfigurationProperties(prefix = "spring.redis")
 public class RedisBean {
 
     private String host;
@@ -24,6 +24,7 @@ public class RedisBean {
     JedisPoolConfig jedisPoolConfig(){
         return new JedisPoolConfig();
     }
+
 
     @Bean
     JedisConnectionFactory jedisConnectionFactory() {

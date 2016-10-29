@@ -3,7 +3,7 @@ package spring.contoller.advice;
 import java.io.Serializable;
 
 /**
- * Created by frinder6 on 2016/9/16.
+ * Created on 2016/9/16.
  */
 public class Error<T> implements Serializable {
 

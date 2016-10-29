@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
- * Created by frinder6 on 2016/9/2.
+ * Created on 2016/9/2.
  */
 @Component
 public class ArgsBean {

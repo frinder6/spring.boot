@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by frinder6 on 2016/10/14.
+ * Created on 2016/10/14.
  */
 @Configuration
 public class RedisClusterBean {

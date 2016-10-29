@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by frinder6 on 2016/9/23.
+ * Created on 2016/9/23.
  */
 //@Service("userService2")
 public class UserService2Impl implements UserService2 {

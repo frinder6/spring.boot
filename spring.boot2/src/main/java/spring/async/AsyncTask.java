@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.concurrent.Future;
 
 /**
- * Created by frinder6 on 2016/9/24.
+ * Created on 2016/9/24.
  */
 @Component
 public class AsyncTask {

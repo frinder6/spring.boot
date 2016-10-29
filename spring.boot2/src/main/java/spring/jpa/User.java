@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by frinder6 on 2016/9/19.
+ * Created on 2016/9/19.
  */
 @Entity
 public class User implements Serializable {

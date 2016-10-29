@@ -13,7 +13,7 @@ import javax.annotation.Resource;
 import java.io.Serializable;
 
 /**
- * Created by frinder6 on 2016/9/24.
+ * Created on 2016/9/24.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
