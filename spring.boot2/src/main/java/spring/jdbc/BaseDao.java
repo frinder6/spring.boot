@@ -23,7 +23,7 @@ public class BaseDao<T> implements IDao<T> {
         Map<String, Object> params = new HashMap<String, Object>() {{
             put("id", id);
         }};
-        return namedParameterJdbcTemplate.queryForObject(sql, params, new BeanPropertyRowMapper<T>(mappedClass));
+        return namedParameterJdbcTemplate.queryForObject(sql, params, new BeanPropertyRowMapper<>(mappedClass));
     }
 
 }

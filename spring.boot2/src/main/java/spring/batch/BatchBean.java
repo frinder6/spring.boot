@@ -47,6 +47,12 @@ public class BatchBean {
     private DataSource secondaryDataSource;
 
 
+    /**
+     * 分页读取数据 provider
+     *
+     * @return
+     * @throws Exception
+     */
     @StepScope
     @Bean
     public PagingQueryProvider pagingQueryProvider() throws Exception {
@@ -68,23 +74,41 @@ public class BatchBean {
         reader.setDataSource(primaryDataSource);
         reader.setQueryProvider(pagingQueryProvider);
         // reader 参数传递
-        reader.setParameterValues(new HashMap(){{
+        reader.setParameterValues(new HashMap() {{
             put("mod", mod);
         }});
-        reader.setRowMapper(new RowMapper<User>() {
-            @Override
-            public User mapRow(ResultSet resultSet, int i) throws SQLException {
-                User user = new User();
-                user.setId(resultSet.getLong("id"));
-                user.setName(resultSet.getString("name"));
-                user.setAge(resultSet.getInt("age"));
-                user.setRemark(resultSet.getString("remark"));
-                user.setSex(resultSet.getString("sex"));
-                return user;
-            }
-        });
+//        reader.setRowMapper(new RowMapper<User>() {
+//            @Override
+//            public User mapRow(ResultSet resultSet, int i) throws SQLException {
+//                User user = new User();
+//                user.setId(resultSet.getLong("id"));
+//                user.setName(resultSet.getString("name"));
+//                user.setAge(resultSet.getInt("age"));
+//                user.setRemark(resultSet.getString("remark"));
+//                user.setSex(resultSet.getString("sex"));
+//                return user;
+//            }
+//        });
+        reader.setRowMapper((ResultSet resultSet, int i) -> (convert(resultSet)));
         reader.setPageSize(300);
         return reader;
+    }
+
+    /**
+     * 将 ResultSet 转换为 User
+     *
+     * @param resultSet
+     * @return
+     * @throws SQLException
+     */
+    private User convert(ResultSet resultSet) throws SQLException {
+        User user = new User();
+        user.setId(resultSet.getLong("id"));
+        user.setName(resultSet.getString("name"));
+        user.setAge(resultSet.getInt("age"));
+        user.setRemark(resultSet.getString("remark"));
+        user.setSex(resultSet.getString("sex"));
+        return user;
     }
 
     @StepScope
