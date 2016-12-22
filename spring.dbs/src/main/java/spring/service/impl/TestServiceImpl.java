@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import spring.dao.IDao;
 import spring.dao.SqlEntity;
 import spring.dao.SqlFormatException;
+import spring.dbs.DatasourceKey;
 import spring.entity.SpringTable;
 import spring.service.TestService;
 
@@ -40,7 +41,7 @@ public class TestServiceImpl implements TestService<SpringTable> {
     }
 
     @Override
-    public SpringTable selectForSingle(String key, SpringTable whereEntity) throws SqlFormatException {
+    public SpringTable selectForSingle(@DatasourceKey String key, SpringTable whereEntity) throws SqlFormatException {
         return springTableIDao.selectForSingle(setEntity(whereEntity, whereEntity));
     }
 

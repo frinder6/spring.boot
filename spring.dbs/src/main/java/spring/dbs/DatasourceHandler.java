@@ -4,10 +4,14 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
+import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
 import java.nio.charset.StandardCharsets;
 import java.util.zip.CRC32;
 
@@ -22,23 +26,68 @@ public class DatasourceHandler {
 
     private static final String[] DATASOURCES = new String[]{"primaryDataSource", "secondaryDataSource", "thirdlyDataSource"};
 
+    private static final String STRING = "java.lang.String";
+
     @Pointcut("execution(* spring.service..*(..))")
     public void datasourcePoint() {
     }
 
     @Around("datasourcePoint()")
-    public Object handler(ProceedingJoinPoint point) throws Throwable {
-        LOGGER.info("begin get datasource......");
-        Object[] args = point.getArgs();
-        if (null != args && args.length > 0) {
-            String key = String.valueOf(args[0]);
-            // 存入key
-            DataSourceContextHolder.setDatasourceKey(getKey(key));
+    public Object handler2(ProceedingJoinPoint point) throws Throwable {
+        LOGGER.info("begin get datasource !");
+        /**
+         * 获取当前执行的方法，并获取参数，根据注解判断出 datasource key
+         */
+        Method method = ((MethodSignature) point.getSignature()).getMethod();
+        Parameter[] parameters = method.getParameters();
+        if (null != parameters && parameters.length > 0) {
+            Object[] args = point.getArgs();
+            int i = 0;
+            LOGGER.info("first use annotation strategy to find the key !");
+            for (Parameter parameter : parameters) {
+                LOGGER.info("this arg's name is : " + parameter.getName());
+                LOGGER.info("this arg's type is : " + parameter.getType());
+                if (parameter.isAnnotationPresent(DatasourceKey.class)) {
+                    LOGGER.info("*****************************");
+                    LOGGER.info(parameter.getName() + " is datasource key !");
+                    LOGGER.info("*****************************");
+                    DataSourceContextHolder.setDatasourceKey(getKey(String.valueOf(args[i])));
+                    break;
+                } else {
+                    LOGGER.info("but this arg is not datasource key !");
+                }
+                ++i;
+            }
+            /**
+             * 当注解参数不能使用，默认取第一个 string类型参数
+             */
+            if (StringUtils.isEmpty(DataSourceContextHolder.getDatasourceKey())) {
+                LOGGER.info("the annotation strategy is wrong, use string parameter strategy !");
+                i = 0;
+                for (Parameter parameter : parameters) {
+                    LOGGER.info("this arg's name is : " + parameter.getName());
+                    LOGGER.info("this arg's type is : " + parameter.getType());
+                    if (STRING.equalsIgnoreCase(parameter.getParameterizedType().getTypeName())) {
+                        LOGGER.info("*****************************");
+                        LOGGER.info(parameter.getName() + " is datasource key !");
+                        LOGGER.info("*****************************");
+                        DataSourceContextHolder.setDatasourceKey(getKey(String.valueOf(args[i])));
+                        break;
+                    } else {
+                        LOGGER.info("but this arg is not datasource key !");
+                    }
+                    ++i;
+                }
+            }
         }
-        Object result = point.proceed();
-        // 清除key
-        DataSourceContextHolder.clearDatasourceKey();
-        LOGGER.info("end get datasource......");
+        Object result;
+        try {
+            result = point.proceed();
+        } finally {
+            // 清除key
+            DataSourceContextHolder.clearDatasourceKey();
+        }
+        LOGGER.info("end get datasource !");
         return result;
     }
 
