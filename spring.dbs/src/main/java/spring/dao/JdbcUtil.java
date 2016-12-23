@@ -54,8 +54,8 @@ public class JdbcUtil<T> {
                 }
                 ++i;
             }
-//            insertCols.append(", create_time");
-//            insertValues.append(", NOW()");
+            // insertCols.append(", create_time");
+            // insertValues.append(", NOW()");
         } else {
             throw new SqlFormatException(insertSql);
         }
@@ -78,7 +78,7 @@ public class JdbcUtil<T> {
      */
     public String getWheresDeleteSql(SqlEntity<T> entity) {
         String deleteSql = "DELETE FROM %s WHERE 1 != 1 %s";
-        return String.format(deleteSql, entity.getTableName(), getWheres(entity.getWhereEntity()));
+        return String.format(deleteSql, entity.getTableName(), getWheres(entity.getWhereEntity(), false));
     }
 
     /**
@@ -103,7 +103,7 @@ public class JdbcUtil<T> {
         } else {
             throw new SqlFormatException(updateSql);
         }
-        return String.format(updateSql, entity.getTableName(), updateValues, getWheres(entity.getWhereEntity()));
+        return String.format(updateSql, entity.getTableName(), updateValues, getWheres(entity.getWhereEntity(), false));
     }
 
 
@@ -127,18 +127,18 @@ public class JdbcUtil<T> {
                 ++i;
             }
         } else {
-            throw new SqlFormatException(selectSql);
+            // throw new SqlFormatException(selectSql);
         }
-        return String.format(selectSql, entity.getTableName(), getWheres(entity.getWhereEntity()));
+        return String.format(selectSql, entity.getTableName(), getWheres(entity.getWhereEntity(), true));
     }
 
 
     /**
-     *
      * @param entity
+     * @param isSelect
      * @return
      */
-    public String getWheres(T entity) {
+    public String getWheres(T entity, boolean isSelect) {
         StringBuilder whereValues = new StringBuilder();
         Set<String> feilds = getFeilds(entity, true);
         if (!feilds.isEmpty()) {
@@ -153,6 +153,10 @@ public class JdbcUtil<T> {
                 ++i;
             }
             whereValues.append(" )");
+        } else {
+            if (isSelect) {
+                whereValues.append(" OR ( 1 = 1 )");
+            }
         }
         return whereValues.toString();
     }

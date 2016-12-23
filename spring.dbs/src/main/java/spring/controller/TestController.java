@@ -2,6 +2,7 @@ package spring.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import spring.dao.SqlFormatException;
 import spring.entity.SpringTable;
@@ -53,8 +54,8 @@ public class TestController {
      * @throws SqlFormatException
      */
     @RequestMapping("/id")
-    public SpringTable findById(SpringTable entity) throws SqlFormatException {
-        return testService.selectForSingle(entity.getK(), entity);
+    public SpringTable findById(@RequestParam("key") String key, SpringTable entity) throws SqlFormatException {
+        return testService.selectForSingle(key, entity);
     }
 
 
@@ -66,8 +67,8 @@ public class TestController {
      * @throws SqlFormatException
      */
     @RequestMapping("/query")
-    public List<SpringTable> select(SpringTable entity) throws SqlFormatException {
-        return testService.selectForList(entity.getK(), entity);
+    public List<SpringTable> select(@RequestParam("key") String key, SpringTable entity) throws SqlFormatException {
+        return testService.selectForList(key, entity);
     }
 
 }

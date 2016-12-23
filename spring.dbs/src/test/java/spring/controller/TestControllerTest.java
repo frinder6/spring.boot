@@ -65,7 +65,7 @@ public class TestControllerTest {
         String responseStr = mvc.perform(MockMvcRequestBuilders
                 .post(uri, "json")
                 .accept(MediaType.APPLICATION_JSON)
-                .param("k", "key3")
+                .param("key", "key8")
                 .param("id", "1")
         )
                 .andDo(MockMvcResultHandlers.print())
@@ -78,7 +78,18 @@ public class TestControllerTest {
 
     @Test
     public void select() throws Exception {
-
+        String uri = "/test/query";
+        String responseStr = mvc.perform(MockMvcRequestBuilders
+                .post(uri, "json")
+                .accept(MediaType.APPLICATION_JSON)
+                .param("key", "key3")
+        )
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
+        System.out.println(responseStr);
     }
 
 }
