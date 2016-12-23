@@ -56,7 +56,19 @@ public class TestControllerTest {
 
     @Test
     public void delete() throws Exception {
-
+        String uri = "/test/remove";
+        String responseStr = mvc.perform(MockMvcRequestBuilders
+                .post(uri, "json")
+                .accept(MediaType.APPLICATION_JSON)
+                .param("k", "key8")
+                .param("id", "1")
+        )
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
+        System.out.println(responseStr);
     }
 
     @Test
@@ -65,7 +77,7 @@ public class TestControllerTest {
         String responseStr = mvc.perform(MockMvcRequestBuilders
                 .post(uri, "json")
                 .accept(MediaType.APPLICATION_JSON)
-                .param("key", "key8")
+                .param("key", "key1")
                 .param("id", "1")
         )
                 .andDo(MockMvcResultHandlers.print())

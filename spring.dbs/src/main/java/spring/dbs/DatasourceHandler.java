@@ -42,43 +42,31 @@ public class DatasourceHandler {
         Parameter[] parameters = method.getParameters();
         if (null != parameters && parameters.length > 0) {
             Object[] args = point.getArgs();
+            String aValue = "", sValue = "";
             int i = 0;
-            LOGGER.info("first use annotation strategy to find the key !");
             for (Parameter parameter : parameters) {
-                LOGGER.info("this arg's name is : " + parameter.getName());
                 LOGGER.info("this arg's type is : " + parameter.getType());
                 if (parameter.isAnnotationPresent(DatasourceKey.class)) {
-                    LOGGER.info("*****************************");
-                    LOGGER.info(parameter.getName() + " is datasource key !");
-                    LOGGER.info("*****************************");
-                    DataSourceContextHolder.setDatasourceKey(getKey(String.valueOf(args[i])));
+                    aValue = String.valueOf(args[i]);
                     break;
+                } else if (STRING.equalsIgnoreCase(parameter.getParameterizedType().getTypeName())) {
+                    if (StringUtils.isEmpty(sValue)) {
+                        sValue = String.valueOf(args[i]);
+                    }
                 } else {
                     LOGGER.info("but this arg is not datasource key !");
                 }
                 ++i;
             }
-            /**
-             * 当注解参数不能使用，默认取第一个 string类型参数
-             */
-            if (StringUtils.isEmpty(DataSourceContextHolder.getDatasourceKey())) {
-                LOGGER.info("the annotation strategy is wrong, use string parameter strategy !");
-                i = 0;
-                for (Parameter parameter : parameters) {
-                    LOGGER.info("this arg's name is : " + parameter.getName());
-                    LOGGER.info("this arg's type is : " + parameter.getType());
-                    if (STRING.equalsIgnoreCase(parameter.getParameterizedType().getTypeName())) {
-                        LOGGER.info("*****************************");
-                        LOGGER.info(parameter.getName() + " is datasource key !");
-                        LOGGER.info("*****************************");
-                        DataSourceContextHolder.setDatasourceKey(getKey(String.valueOf(args[i])));
-                        break;
-                    } else {
-                        LOGGER.info("but this arg is not datasource key !");
-                    }
-                    ++i;
-                }
+            String key;
+            if (!StringUtils.isEmpty(aValue)) {
+                key = aValue;
+            } else if (!StringUtils.isEmpty(sValue)) {
+                key = sValue;
+            } else {
+                key = "a"; // default 0
             }
+            DataSourceContextHolder.setDatasourceKey(getKey(key));
         }
         Object result;
         try {
