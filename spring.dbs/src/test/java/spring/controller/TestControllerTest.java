@@ -60,7 +60,25 @@ public class TestControllerTest {
         String responseStr = mvc.perform(MockMvcRequestBuilders
                 .post(uri, "json")
                 .accept(MediaType.APPLICATION_JSON)
-                .param("k", "key8")
+                .param("k", "key1")
+                .param("id", "1")
+        )
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
+        System.out.println(responseStr);
+    }
+
+    @Test
+    public void update() throws Exception {
+        String uri = "/test/modify";
+        String responseStr = mvc.perform(MockMvcRequestBuilders
+                .post(uri, "json")
+                .accept(MediaType.APPLICATION_JSON)
+                .param("k", "key1")
+                .param("v", "v11")
                 .param("id", "1")
         )
                 .andDo(MockMvcResultHandlers.print())

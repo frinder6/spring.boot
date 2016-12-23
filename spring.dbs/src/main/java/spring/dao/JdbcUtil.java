@@ -78,7 +78,7 @@ public class JdbcUtil<T> {
      */
     public String getWheresDeleteSql(SqlEntity<T> entity) {
         String deleteSql = "DELETE FROM %s WHERE 1 != 1 %s";
-        return String.format(deleteSql, entity.getTableName(), getWheres(entity.getWhereEntity(), false));
+        return String.format(deleteSql, entity.getTableName(), getWheres(entity.getWhereEntity()));
     }
 
     /**
@@ -87,12 +87,15 @@ public class JdbcUtil<T> {
      * @throws SqlFormatException
      */
     public String getUpdateSql(SqlEntity<T> entity) throws SqlFormatException {
-        String updateSql = "UPDATE %s SET %s WHERE 1 != 1 %s";
+        String updateSql = "UPDATE %s SET %s WHERE id = :id";
         StringBuilder updateValues = new StringBuilder();
         Set<String> feilds = getFeilds(entity.getEntity(), true);
         if (!feilds.isEmpty()) {
             int i = 0;
             for (String col : feilds) {
+                if ("id".equalsIgnoreCase(col)) {
+                    continue;
+                }
                 if (i == 0) {
                     updateValues.append(col + " = :" + convert2Camel(col));
                 } else {
@@ -103,7 +106,7 @@ public class JdbcUtil<T> {
         } else {
             throw new SqlFormatException(updateSql);
         }
-        return String.format(updateSql, entity.getTableName(), updateValues, getWheres(entity.getWhereEntity(), false));
+        return String.format(updateSql, entity.getTableName(), updateValues);
     }
 
 
@@ -129,16 +132,15 @@ public class JdbcUtil<T> {
         } else {
             // throw new SqlFormatException(selectSql);
         }
-        return String.format(selectSql, entity.getTableName(), getWheres(entity.getWhereEntity(), true));
+        return String.format(selectSql, entity.getTableName(), getWheres(entity.getWhereEntity()));
     }
 
 
     /**
      * @param entity
-     * @param isSelect
      * @return
      */
-    public String getWheres(T entity, boolean isSelect) {
+    public String getWheres(T entity) {
         StringBuilder whereValues = new StringBuilder();
         Set<String> feilds = getFeilds(entity, true);
         if (!feilds.isEmpty()) {
@@ -154,9 +156,7 @@ public class JdbcUtil<T> {
             }
             whereValues.append(" )");
         } else {
-            if (isSelect) {
-                whereValues.append(" OR ( 1 = 1 )");
-            }
+            whereValues.append(" OR ( 1 = 1 )");
         }
         return whereValues.toString();
     }

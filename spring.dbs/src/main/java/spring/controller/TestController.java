@@ -33,6 +33,12 @@ public class TestController {
         return Response.sucess();
     }
 
+    @RequestMapping("/modify")
+    public Response update(SpringTable entity) throws SqlFormatException {
+        testService.modify(entity.getK(), entity);
+        return Response.sucess();
+    }
+
     /**
      * delete
      *

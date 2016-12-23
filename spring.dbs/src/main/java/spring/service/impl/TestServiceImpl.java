@@ -31,8 +31,8 @@ public class TestServiceImpl implements TestService<SpringTable> {
     }
 
     @Override
-    public int modify(String key, SpringTable entity, SpringTable whereEntity) throws SqlFormatException {
-        return springTableIDao.modify(setEntity(entity, whereEntity));
+    public int modify(String key, SpringTable entity) throws SqlFormatException {
+        return springTableIDao.modify(setEntity(entity, null));
     }
 
     @Override

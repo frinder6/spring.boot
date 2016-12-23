@@ -7,6 +7,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
@@ -20,7 +21,7 @@ import java.util.zip.CRC32;
  */
 @Component
 @Aspect
-public class DatasourceHandler {
+public class DatasourceHandler implements Ordered {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DatasourceHandler.class);
 
@@ -32,7 +33,68 @@ public class DatasourceHandler {
     public void datasourcePoint() {
     }
 
+
     @Around("datasourcePoint()")
+    public Object handler(ProceedingJoinPoint point) throws Throwable {
+        LOGGER.info("begin get datasource !");
+        /**
+         * 获取当前执行的方法，并获取参数，根据注解判断出 datasource key
+         */
+        Method method = ((MethodSignature) point.getSignature()).getMethod();
+        Parameter[] parameters = method.getParameters();
+        if (null != parameters && parameters.length > 0) {
+            Object[] args = point.getArgs();
+            int i = 0;
+            LOGGER.info("first use annotation strategy to find the key !");
+            for (Parameter parameter : parameters) {
+                LOGGER.info("this arg's name is : " + parameter.getName());
+                LOGGER.info("this arg's type is : " + parameter.getType());
+                if (parameter.isAnnotationPresent(DatasourceKey.class)) {
+                    LOGGER.info("*****************************");
+                    LOGGER.info(parameter.getName() + " is datasource key !");
+                    LOGGER.info("*****************************");
+                    DataSourceContextHolder.setDatasourceKey(getKey(String.valueOf(args[i])));
+                    break;
+                } else {
+                    LOGGER.info("but this arg is not datasource key !");
+                }
+                ++i;
+            }
+            /**
+             * 当注解参数不能使用，默认取第一个 string类型参数
+             */
+            if (StringUtils.isEmpty(DataSourceContextHolder.getDatasourceKey())) {
+                LOGGER.info("the annotation strategy is wrong, use string parameter strategy !");
+                i = 0;
+                for (Parameter parameter : parameters) {
+                    LOGGER.info("this arg's name is : " + parameter.getName());
+                    LOGGER.info("this arg's type is : " + parameter.getType());
+                    if (STRING.equalsIgnoreCase(parameter.getParameterizedType().getTypeName())) {
+                        LOGGER.info("*****************************");
+                        LOGGER.info(parameter.getName() + " is datasource key !");
+                        LOGGER.info("*****************************");
+                        DataSourceContextHolder.setDatasourceKey(getKey(String.valueOf(args[i])));
+                        break;
+                    } else {
+                        LOGGER.info("but this arg is not datasource key !");
+                    }
+                    ++i;
+                }
+            }
+        }
+        Object result;
+        try {
+            result = point.proceed();
+        } finally {
+            // 清除key
+            DataSourceContextHolder.clearDatasourceKey();
+        }
+        LOGGER.info("end get datasource !");
+        return result;
+    }
+
+
+    //    @Around("datasourcePoint()")
     public Object handler2(ProceedingJoinPoint point) throws Throwable {
         LOGGER.info("begin get datasource !");
         /**
@@ -99,8 +161,15 @@ public class DatasourceHandler {
         }
         LOGGER.info("this key's result module is : [ " + index + " ]!");
         String datasourceKey = DATASOURCES[index];
+        LOGGER.info("*****************************");
         LOGGER.info("this datasource key is : [ " + datasourceKey + " ]!");
         return datasourceKey;
+    }
+
+
+    @Override
+    public int getOrder() {
+        return 1;
     }
 
     public static void main(String[] args) {

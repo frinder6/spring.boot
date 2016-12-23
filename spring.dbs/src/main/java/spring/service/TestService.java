@@ -13,7 +13,7 @@ public interface TestService<SpringTable> {
 
     int delete(String key, SpringTable entity) throws SqlFormatException;
 
-    int modify(String key, SpringTable entity, SpringTable whereEntity) throws SqlFormatException;
+    int modify(String key, SpringTable entity) throws SqlFormatException;
 
     List<SpringTable> selectForList(String key, SpringTable entity) throws SqlFormatException;
 

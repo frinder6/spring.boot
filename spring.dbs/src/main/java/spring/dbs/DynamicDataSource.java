@@ -1,5 +1,7 @@
 package spring.dbs;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 /**
@@ -7,9 +9,16 @@ import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
  */
 public class DynamicDataSource extends AbstractRoutingDataSource {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(DynamicDataSource.class);
+
+
     @Override
     protected Object determineCurrentLookupKey() {
-        return DataSourceContextHolder.getDatasourceKey();
+        String key = DataSourceContextHolder.getDatasourceKey();
+        LOGGER.info("*********************************");
+        LOGGER.info("datasource key is : " + key);
+        LOGGER.info("*********************************");
+        return key;
     }
 
 }
