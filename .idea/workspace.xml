@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c9030fa-c5a1-4e6b-a6ea-4eeb3d890317" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spring.dbs/src/main/java/spring/dbs/DataSourceContextHolderCopy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spring.dbs/target/classes/spring/dbs/DataSourceContextHolderCopy.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.dbs/target/classes/spring/dbs/DatasourceHandler.class" afterPath="$PROJECT_DIR$/spring.dbs/target/classes/spring/dbs/DatasourceHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.dbs/target/classes/spring/dbs/DynamicDataSource.class" afterPath="$PROJECT_DIR$/spring.dbs/target/classes/spring/dbs/DynamicDataSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.dbs/target/classes/spring/service/TestService.class" afterPath="$PROJECT_DIR$/spring.dbs/target/classes/spring/service/TestService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.dbs/src/main/java/spring/controller/TestController.java" afterPath="$PROJECT_DIR$/spring.dbs/src/main/java/spring/controller/TestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.dbs/src/main/java/spring/dao/JdbcUtil.java" afterPath="$PROJECT_DIR$/spring.dbs/src/main/java/spring/dao/JdbcUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.dbs/src/main/java/spring/dbs/DatasourceHandler.java" afterPath="$PROJECT_DIR$/spring.dbs/src/main/java/spring/dbs/DatasourceHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.dbs/src/main/java/spring/dbs/DynamicDataSource.java" afterPath="$PROJECT_DIR$/spring.dbs/src/main/java/spring/dbs/DynamicDataSource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.dbs/src/main/java/spring/service/TestService.java" afterPath="$PROJECT_DIR$/spring.dbs/src/main/java/spring/service/TestService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.dbs/src/main/java/spring/service/impl/TestServiceImpl.java" afterPath="$PROJECT_DIR$/spring.dbs/src/main/java/spring/service/impl/TestServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.dbs/src/main/resources/application-tx.xml" afterPath="$PROJECT_DIR$/spring.dbs/src/main/resources/application-tx.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.dbs/src/test/java/spring/controller/TestControllerTest.java" afterPath="$PROJECT_DIR$/spring.dbs/src/test/java/spring/controller/TestControllerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.dbs/target/classes/application-tx.xml" afterPath="$PROJECT_DIR$/spring.dbs/target/classes/application-tx.xml" />
-    </list>
+    <list default="true" id="9c9030fa-c5a1-4e6b-a6ea-4eeb3d890317" name="Default" comment="" />
     <ignored path="spring.demo.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -1226,7 +1210,7 @@
       <workItem from="1481430254451" duration="17000" />
       <workItem from="1482215152407" duration="20445000" />
       <workItem from="1482288124866" duration="15487000" />
-      <workItem from="1482392901675" duration="30107000" />
+      <workItem from="1482392901675" duration="30163000" />
     </task>
     <servers />
   </component>
@@ -1263,11 +1247,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163368000" />
+    <option name="totallyTimeSpent" value="163424000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1426" y="0" width="1551" height="1057" extended-state="1" />
-    <editor active="true" />
+    <frame x="1426" y="0" width="1551" height="1057" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
