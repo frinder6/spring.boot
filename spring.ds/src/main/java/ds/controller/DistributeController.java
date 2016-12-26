@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 
 /**
  * Created by frinder6 on 2016/12/26.
@@ -15,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/d")
 public class DistributeController {
 
-    @RequestMapping("/d")
+    @RequestMapping("/s")
     public String distribute(
             @RequestParam("actionType") String actionType,
             @RequestParam("requestData") String requestData
@@ -29,6 +31,19 @@ public class DistributeController {
             System.out.println(plant);
         }
 
+        return "success";
+    }
+
+    @RequestMapping("/m")
+    public String distributes(
+            @RequestParam("actionType") String actionType,
+            @RequestParam("requestData") String requestData
+    ) {
+        if ("1".equalsIgnoreCase(actionType)) {
+            JSON json = JSON.parseArray(requestData);
+            List<Animal> animals = JSON.toJavaObject(json, List.class);
+            System.out.println(animals);
+        }
         return "success";
     }
 

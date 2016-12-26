@@ -34,28 +34,39 @@ public class DistributeControllerTest {
 
     @Test
     public void distribute() throws Exception {
-        String url = "/d/d";
-//        Animal animal = new Animal();
-//        animal.setName("animal");
-//        animal.setAge(10);
-//        animal.setSex("M");
-//        System.out.println(JSON.toJSONString(animal));
-//        Plant plant = new Plant();
-//        plant.setName("plant");
-//        plant.setHeight(15);
-//        plant.setColor("green");
-//        System.out.println(JSON.toJSONString(plant));
-
+        String url = "/d/s";
         String animal = "{\"age\":10,\"name\":\"animal\",\"sex\":\"M\"}";
         String plant = "{\"color\":\"green\",\"height\":15,\"name\":\"plant\"}";
 
         String responseStr = mvc.perform(MockMvcRequestBuilders
+                        .post(url, "json")
+                        .accept(MediaType.APPLICATION_JSON)
+//                .param("actionType", "1")
+                        .param("actionType", "2")
+//                .param("requestData", animal)
+                        .param("requestData", plant)
+        )
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn()
+                .getResponse()
+                .getContentAsString();
+        System.out.println(responseStr);
+
+    }
+
+
+    @Test
+    public void distributes() throws Exception {
+        String url = "/d/m";
+
+        String animals = "[{\"age\":10,\"name\":\"animal1\",\"sex\":\"M\"},{\"age\":10,\"name\":\"animal2\",\"sex\":\"M\"}]";
+
+        String responseStr = mvc.perform(MockMvcRequestBuilders
                 .post(url, "json")
                 .accept(MediaType.APPLICATION_JSON)
-//                .param("actionType", "1")
-                .param("actionType", "2")
-//                .param("requestData", animal)
-                .param("requestData", plant)
+                .param("actionType", "1")
+                .param("requestData", animals)
         )
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
