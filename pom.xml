@@ -5,6 +5,7 @@
     <module>spring.boot</module>
     <module>spring.boot2</module>
       <module>spring.dbs</module>
+      <module>spring.ds</module>
   </modules>
 
 

@@ -25,6 +25,7 @@
         <module name="spring.boot" />
         <module name="spring.boot2" />
         <module name="spring.dbs" />
+        <module name="spring.ds" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,6 +33,7 @@
       <module name="spring.boot2" target="1.8" />
       <module name="spring.dbs" target="1.8" />
       <module name="spring.demo" target="1.8" />
+      <module name="spring.ds" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
