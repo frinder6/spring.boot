@@ -7,6 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/spring.dbs/spring.dbs.iml" filepath="$PROJECT_DIR$/spring.dbs/spring.dbs.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring.demo.iml" filepath="$PROJECT_DIR$/spring.demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring.ds/spring.ds.iml" filepath="$PROJECT_DIR$/spring.ds/spring.ds.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring.rpc.base/spring.rpc.base.iml" filepath="$PROJECT_DIR$/spring.rpc.base/spring.rpc.base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring.rpc.client/spring.rpc.client.iml" filepath="$PROJECT_DIR$/spring.rpc.client/spring.rpc.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring.rpc.server/spring.rpc.server.iml" filepath="$PROJECT_DIR$/spring.rpc.server/spring.rpc.server.iml" />
     </modules>
   </component>
 </project>

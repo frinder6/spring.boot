@@ -26,6 +26,9 @@
         <module name="spring.boot2" />
         <module name="spring.dbs" />
         <module name="spring.ds" />
+        <module name="spring.rpc.base" />
+        <module name="spring.rpc.client" />
+        <module name="spring.rpc.server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -34,6 +37,9 @@
       <module name="spring.dbs" target="1.8" />
       <module name="spring.demo" target="1.8" />
       <module name="spring.ds" target="1.8" />
+      <module name="spring.rpc.base" target="1.8" />
+      <module name="spring.rpc.client" target="1.8" />
+      <module name="spring.rpc.server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
