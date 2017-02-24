@@ -10,3 +10,4 @@
 /spring.dbs/target/classes/spring/dao/*.class
 /spring.dbs/target/classes/spring/service/impl/*.class
 /spring.dbs/target/test-classes/spring/controller/*.class
+*.class

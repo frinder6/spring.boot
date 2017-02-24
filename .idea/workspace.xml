@@ -1,38 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c9030fa-c5a1-4e6b-a6ea-4eeb3d890317" name="Default" comment=".">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring.rpc.client/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring.rpc.client/spring.rpc.client.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring.rpc.client/src/main/java/com/App.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring.rpc.client/src/main/java/com/rpc/config/RpcContext.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring.rpc.client/src/main/java/com/rpc/controller/RpcController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring.rpc.client/src/main/resources/application.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring.rpc.client/src/main/resources/logback-spring.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring.rpc.client/src/test/java/spring/demo/AppTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_jsp_8_1_15_v20140411.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_com_sun_el_2_2_0_v201108011116.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_el_2_2_0_v201108011116.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_servlet_jsp_2_2_0_v201112011158.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_servlet_jsp_jstl_1_2_0_v201105211821.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_org_apache_jasper_glassfish_2_2_2_v201112011158.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_org_apache_taglibs_standard_glassfish_1_2_0_v201112081803.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_org_eclipse_jdt_core_3_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_1_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jetty_1_1_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_1_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_1_4_RELEASE.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="9c9030fa-c5a1-4e6b-a6ea-4eeb3d890317" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.boot/pom.xml" afterPath="$PROJECT_DIR$/spring.boot/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.boot/spring.boot.iml" afterPath="$PROJECT_DIR$/spring.boot/spring.boot.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.boot2/spring.boot2.iml" afterPath="$PROJECT_DIR$/spring.boot2/spring.boot2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.dbs/spring.dbs.iml" afterPath="$PROJECT_DIR$/spring.dbs/spring.dbs.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.demo.iml" afterPath="$PROJECT_DIR$/spring.demo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring.ds/spring.ds.iml" afterPath="$PROJECT_DIR$/spring.ds/spring.ds.iml" />
     </list>
     <ignored path="spring.demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -933,8 +903,16 @@
       <workItem from="1483581379828" duration="2512000" />
       <workItem from="1487318117617" duration="2086000" />
       <workItem from="1487765394698" duration="749000" />
-      <workItem from="1487901928814" duration="18971000" />
+      <workItem from="1487901928814" duration="19065000" />
     </task>
+    <task id="LOCAL-00001" summary=".">
+      <created>1487928082432</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1487928082432</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -970,7 +948,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205421000" />
+    <option name="totallyTimeSpent" value="205515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1429" y="75" width="1557" height="904" extended-state="0" />
