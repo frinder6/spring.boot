@@ -11,3 +11,6 @@
 /spring.dbs/target/classes/spring/service/impl/*.class
 /spring.dbs/target/test-classes/spring/controller/*.class
 *.class
+/spring.rpc.client/target
+/spring.rpc.server/target
+/spring.rpc.base/target
