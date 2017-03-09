@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="10 seconds" debug="true">
+
+    <springProperty scope="context" name="appName" source="app.name" defaultValue="spring.redis"/>
+
+    <contextName>${appName}</contextName>
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${appName} %d{yyyy-MM-dd HH:mm:ss.SSS} [%-4relative] [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+
+    <logger name="spring" level="info"/>
+
+
+    <root level="info">
+        <appender-ref ref="stdout"/>
+    </root>
+
+
+</configuration>

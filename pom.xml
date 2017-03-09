@@ -9,6 +9,9 @@
         <module>spring.rpc.base</module>
         <module>spring.rpc.server</module>
         <module>spring.rpc.client</module>
+        <module>spring.redis</module>
+        <module>spring.zk</module>
+        <module>spring.commom</module>
     </modules>
 
 

@@ -24,22 +24,28 @@
         <processorPath useClasspath="true" />
         <module name="spring.boot" />
         <module name="spring.boot2" />
+        <module name="spring.commom" />
         <module name="spring.dbs" />
         <module name="spring.ds" />
+        <module name="spring.redis" />
         <module name="spring.rpc.base" />
         <module name="spring.rpc.client" />
         <module name="spring.rpc.server" />
+        <module name="spring.zk" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring.boot" target="1.8" />
       <module name="spring.boot2" target="1.8" />
+      <module name="spring.commom" target="1.8" />
       <module name="spring.dbs" target="1.8" />
       <module name="spring.demo" target="1.8" />
       <module name="spring.ds" target="1.8" />
+      <module name="spring.redis" target="1.8" />
       <module name="spring.rpc.base" target="1.8" />
       <module name="spring.rpc.client" target="1.8" />
       <module name="spring.rpc.server" target="1.8" />
+      <module name="spring.zk" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

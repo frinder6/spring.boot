@@ -4,12 +4,15 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/spring.boot/spring.boot.iml" filepath="$PROJECT_DIR$/spring.boot/spring.boot.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring.boot2/spring.boot2.iml" filepath="$PROJECT_DIR$/spring.boot2/spring.boot2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring.commom/spring.commom.iml" filepath="$PROJECT_DIR$/spring.commom/spring.commom.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring.dbs/spring.dbs.iml" filepath="$PROJECT_DIR$/spring.dbs/spring.dbs.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring.demo.iml" filepath="$PROJECT_DIR$/spring.demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring.ds/spring.ds.iml" filepath="$PROJECT_DIR$/spring.ds/spring.ds.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring.redis/spring.redis.iml" filepath="$PROJECT_DIR$/spring.redis/spring.redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring.rpc.base/spring.rpc.base.iml" filepath="$PROJECT_DIR$/spring.rpc.base/spring.rpc.base.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring.rpc.client/spring.rpc.client.iml" filepath="$PROJECT_DIR$/spring.rpc.client/spring.rpc.client.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring.rpc.server/spring.rpc.server.iml" filepath="$PROJECT_DIR$/spring.rpc.server/spring.rpc.server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring.zk/spring.zk.iml" filepath="$PROJECT_DIR$/spring.zk/spring.zk.iml" />
     </modules>
   </component>
 </project>

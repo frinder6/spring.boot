@@ -4,10 +4,13 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring.boot" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring.boot2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring.commom" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring.dbs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring.ds" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring.redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring.rpc.base" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring.rpc.client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring.rpc.server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring.zk" charset="UTF-8" />
   </component>
 </project>
