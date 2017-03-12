@@ -15,7 +15,7 @@ public class ZkLockBean {
 
     @Bean
     public RetryPolicy retryPolicy() {
-        return new ExponentialBackoffRetry(1000, 3);
+        return new ExponentialBackoffRetry(100, 9);
     }
 
     @Bean

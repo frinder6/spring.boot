@@ -8,6 +8,8 @@ import org.apache.curator.framework.recipes.locks.StandardLockInternalsDriver;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.zookeeper.CreateMode;
 
+import java.util.Random;
+
 /**
  * Created by frinder6 on 2017/3/7.
  */
@@ -74,7 +76,7 @@ public class ZkTest {
             CuratorFramework client = CuratorFrameworkFactory.newClient("10.199.195.228:2181", retryPolicy);
             client.start();
 
-             InterProcessMutex lock = new InterProcessMutex(client, "/mylock");
+            InterProcessMutex lock = new InterProcessMutex(client, "/mylock");
 //            InterProcessMutex lock = new InterProcessMutex(client, "/mylock", new NoFairLockDriver());
 
             try {
@@ -94,7 +96,6 @@ public class ZkTest {
             client.close();
         }
     }
-
 
 
     static class NoFairLockDriver extends StandardLockInternalsDriver {
@@ -138,7 +139,7 @@ public class ZkTest {
         public String getRandomSuffix() {
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < numLength; i++) {
-                sb.append((int) (Math.random() * 10));
+                sb.append(new Random().nextInt(10));
             }
             return sb.toString();
         }

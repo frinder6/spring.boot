@@ -41,7 +41,7 @@ public class RedisInterceptor {
             logger.error("锁定失败！");
             return null;
         }
-        boolean locked = redisLockService.lock(lockValue.toString(), 0, lock.expireTime());
+        boolean locked = redisLockService.lock(lock.tableName(), lockValue.toString(), 0, lock.expireTime());
         if (!locked) {
             logger.error("锁定失败！");
             return null;
@@ -52,7 +52,7 @@ public class RedisInterceptor {
             logger.info("*************************************************");
             return point.proceed();
         } finally {
-            redisLockService.unlock(lockValue.toString());
+            redisLockService.unlock(lock.tableName(), lockValue.toString());
         }
     }
 

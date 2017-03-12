@@ -103,8 +103,6 @@ public class RedisClient {
      * @return
      */
     public boolean setKeyWithExpireTime(String key, String value, int time) {
-        if (time == 0) {
-        }
         Jedis client = jedisPool.getResource();
         String result;
         try {
@@ -172,12 +170,12 @@ public class RedisClient {
      * @param o
      * @return
      */
-    public boolean setAnObject(String key, Object o) {
+    public Object setAnObject(String key, Object o) {
         Jedis client = jedisPool.getResource();
         try {
             String afterSerialize = JSON.toJSONString(o);
-            o = client.set(key, afterSerialize);
-            return true;
+            Object r = client.set(key, afterSerialize);
+            return r;
         } finally {
             client.close();
         }

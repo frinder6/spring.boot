@@ -2,7 +2,6 @@ package spring.config;
 
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.recipes.locks.InterProcessMutex;
-import org.apache.curator.framework.recipes.locks.InterProcessReadWriteLock;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -43,17 +42,16 @@ public class ZkLockInterceptor {
         }
         Object lockValue = AopUtils.getLockValue(point);
         if (null == lockValue) {
-            logger.error("锁定失败！");
+            logger.error("锁定失败，终止执行！");
             return null;
         }
-        InterProcessReadWriteLock readWriteLock;
         InterProcessMutex writeLock = null;
         try {
-            String path = "/" + point.getTarget().getClass().toString() + "." + method.getName();
-            readWriteLock = zkLockClient.getLock(client, path);
-            writeLock = readWriteLock.writeLock();
+            String path = "/" + lock.tableName() + "." + lockValue;
+            writeLock = zkLockClient.getWriteLock(client, path);
             writeLock.acquire();
             logger.info("*************************************************");
+            logger.info(path);
             logger.info("锁定成功，执行业务方法！");
             logger.info("*************************************************");
             return point.proceed();

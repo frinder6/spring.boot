@@ -5,8 +5,8 @@ package spring.config;
  */
 public interface RedisLockService {
 
-    boolean lock(String key, long timeout, int expire);
+    boolean lock(String prefix, String key, long timeout, int expire);
 
-    void unlock(String key);
+    void unlock(String prefix, String key);
 
 }

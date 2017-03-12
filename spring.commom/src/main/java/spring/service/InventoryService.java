@@ -8,7 +8,7 @@ import spring.config.ParameterLock;
  */
 public interface InventoryService {
 
-    @MethodLock
+    @MethodLock(tableName = "inventory_table")
     void reduce(@ParameterLock String inventoryId);
 
     void print();

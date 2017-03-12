@@ -23,4 +23,11 @@ public @interface MethodLock {
 
     int expireTime() default 1; // key在redis里存在的时间，1000S
 
+    /**
+     * 需要锁定的表
+     *
+     * @return
+     */
+    String tableName();
+
 }

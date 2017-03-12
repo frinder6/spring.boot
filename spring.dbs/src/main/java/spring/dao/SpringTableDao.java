@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public class SpringTableDao extends BaseDao<SpringTable> {
 
-    private final String tableName = "spring_table";
+    private static final String tableName = "spring_table";
 
     @Override
     public long persist(SqlEntity<SpringTable> entity) throws SqlFormatException {
